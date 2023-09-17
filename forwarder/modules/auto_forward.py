@@ -4,7 +4,7 @@ from telegram import Message, MessageId
 from telegram.ext import CallbackContext, Filters, MessageHandler
 from telegram.error import ChatMigrated
 from telegram.update import Update
-
+from forwarder.modules.filters import FilterMessage
 from forwarder import FROM_CHATS, LOGGER, REMOVE_TAG, TO_CHATS, FROM_CHATS_1, TO_CHATS_1,  FROM_CHATS_2, TO_CHATS_2, FROM_CHATS_3, TO_CHATS_3, FROM_CHATS_4, TO_CHATS_4, FROM_CHATS_5, TO_CHATS_5, dispatcher
 
 # Channel
@@ -14,11 +14,10 @@ def send_message(message: Message, chat_id: int) -> Union[MessageId, Message]:
         return message.copy(chat_id)
     return message.forward(chat_id)
 
-
-
 def forward(update: Update, context: CallbackContext):
     message = update.effective_message
     chat = update.effective_chat
+    filter_forward = await FilterMessage(message)
     if not message or not chat:
         return
     from_chat_name = chat.title or chat.first_name
