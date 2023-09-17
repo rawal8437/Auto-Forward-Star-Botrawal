@@ -1,5 +1,9 @@
-from forwarder.sample_config import FORWARD_FILTERS
+import os
 from pyrogram.types import Message
+
+FILES_FILTERS = "video document"
+DEFAULT_FILTERS = "video document photo audio text gif forwarded poll sticker"
+FORWARD_FILTERS = list(set(x for x in os.environ.get("FORWARD_FILTERS", FILES_FILTERS).split()))    
 
 async def FilterMessage(message: Message):
     if (message.forward_from or message.forward_from_chat) and ("forwarded" not in FORWARD_FILTERS):
