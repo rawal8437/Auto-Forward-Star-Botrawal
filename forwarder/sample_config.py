@@ -17,7 +17,10 @@ class Config(object):
     # REQUIRED
     API_KEY = "617722711:AAHysCHsVcQja6LOlHa88101lKjrxez80-M"  # API key obtained from BotFather
     OWNER_ID = "582884567"  # If you dont know, run the bot and do /id in your private chat with the bot
-
+    
+    DEFAULT_FILTERS = "video document photo audio text gif forwarded poll sticker"
+    FORWARD_FILTERS = list(set(x for x in os.environ.get("FORWARD_FILTERS", DEFAULT_FILTERS).split()))
+    
     # FOR AUTOMATICALLY FORWARDING MESSAGES
     FROM_CHATS = [-1001234704297]  # List of chat id's to forward messages from
     TO_CHATS = [-1001128355490]  # List of chat id's to forward messages to
