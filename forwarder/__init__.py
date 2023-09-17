@@ -20,7 +20,7 @@ httpx_logger.setLevel(logging.WARNING)
 # load json file
 config_name = "channel_list.json"
 if not path.isfile(config_name):
-    LOGGER.error("No chat_list.json config file found! Exiting...")
+    LOGGER.error("No channel_list.json config file found! Exiting...")
     exit(1)
 with open(config_name, "r") as data:
     CONFIG = json.load(data)
