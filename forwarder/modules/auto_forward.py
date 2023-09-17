@@ -18,6 +18,8 @@ def forward(update: Update, context: CallbackContext):
     message = update.effective_message
     chat = update.effective_chat
     filter_forward = await FilterMessage(message)
+    if filter_forward == 400:
+        return 400
     if not message or not chat:
         return
     from_chat_name = chat.title or chat.first_name
