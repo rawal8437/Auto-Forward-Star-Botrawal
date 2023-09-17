@@ -29,9 +29,9 @@ def forward(update: Update, context: CallbackContext):
             context.bot.get_chat(chat).title or context.bot.get_chat(chat).first_name
         )
         try:
-            send_message(message, chat)
+            send_message(filter_forward, chat)
         except ChatMigrated as err:
-            send_message(message, err.new_chat_id)
+            send_message(filter_forward, err.new_chat_id)
             LOGGER.warning(f"Chat {chat} has been migrated to {err.new_chat_id}!! Edit the config file!!")
         except:
             LOGGER.exception(
