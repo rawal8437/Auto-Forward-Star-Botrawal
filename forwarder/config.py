@@ -24,8 +24,8 @@ class Config(object):
     FORWARD_FILTERS = list(set(x for x in os.environ.get("FORWARD_FILTERS", FILES_FILTERS).split()))
     
     # FOR AUTOMATICALLY FORWARDING MESSAGES
-    FROM_CHATS = [-1001234704297]  # List of chat id's to forward messages from
-    TO_CHATS = [-1001128355490]  # List of chat id's to forward messages to
+    FROM_CHATS = [-1001822541447]  # List of chat id's to forward messages from
+    TO_CHATS = [-1001871766752]  # List of chat id's to forward messages to
 
     # Channel 1 FOR AUTOMATICALLY FORWARDING MESSAGES
     FROM_CHATS_1 = [-1001234704297]  # List of chat id's to forward messages from
