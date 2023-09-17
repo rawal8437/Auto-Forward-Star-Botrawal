@@ -17,7 +17,7 @@ def send_message(message: Message, chat_id: int) -> Union[MessageId, Message]:
 def forward(update: Update, context: CallbackContext):
     message = update.effective_message
     chat = update.effective_chat
-    filter_forward = await FilterMessage(message)
+    filter_forward = FilterMessage(message)
     if filter_forward == 400:
         return 400
     if not message or not chat:
