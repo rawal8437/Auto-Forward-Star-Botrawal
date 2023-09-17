@@ -17,7 +17,7 @@ class Config(object):
 
     # REQUIRED
     API_KEY = "617722711:AAHysCHsVcQja6LOlHa88101lKjrxez80-M"  # API key obtained from BotFather
-    OWNER_ID = "582884567"  # If you dont know, run the bot and do /id in your private chat with the bot
+    OWNER_ID = "1391556668"  # If you dont know, run the bot and do /id in your private chat with the bot
 
     FILES_FILTERS = "video document"
     DEFAULT_FILTERS = "video document photo audio text gif forwarded poll sticker"
