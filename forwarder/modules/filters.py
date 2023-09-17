@@ -1,4 +1,4 @@
-from forwarder.config import FORWARD_FILTERS
+from forwarder import FORWARD_FILTERS
 from pyrogram.types import Message
 
 async def FilterMessage(message: Message):
