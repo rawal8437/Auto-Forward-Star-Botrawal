@@ -7,7 +7,6 @@ from telegram.ext import ApplicationBuilder
 
 load_dotenv(".env")
 
-
 logging.basicConfig(
     format="[ %(asctime)s: %(levelname)-8s ] %(name)-20s - %(message)s",
     level=logging.INFO,
@@ -19,7 +18,7 @@ httpx_logger = logging.getLogger('httpx')
 httpx_logger.setLevel(logging.WARNING)
 
 # load json file
-config_name = "chat_list.json"
+config_name = "channel_list.json"
 if not path.isfile(config_name):
     LOGGER.error("No chat_list.json config file found! Exiting...")
     exit(1)
