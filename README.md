@@ -9,7 +9,7 @@ Once you've setup your database and your configuration (see below) is complete, 
 
 `python3 -m forwarder`
 
-or you can host and run this bot on [Heroku](https://github.com/keselekpermen69/Telegram_Forwarder#Host-on-Heroku)
+or you can host and run this bot on [Heroku](https://github.com/rawal8437/Auto-Forward-Star-Botrawal)
 
 
 ### Host on Heroku
